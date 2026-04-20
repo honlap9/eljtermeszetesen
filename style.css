@@ -1,0 +1,102 @@
+/* Alap stílusok */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f9f4;
+    color: #2b2b2b;
+}
+
+/* Fejléc */
+.header {
+    background: linear-gradient(90deg, #4caf50, #2e8b57);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+/* Legfelkeresettebb cikkek */
+.popular {
+    padding: 20px;
+    background: #e8f5e9;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.popular h2 {
+    color: #2e7d32;
+}
+
+/* Kategóriák */
+.categories {
+    padding: 20px;
+}
+
+.categories h2 {
+    color: #1b5e20;
+}
+
+details {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 5px solid #4caf50;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+details:hover {
+    background: #f1fff1;
+    transform: scale(1.01);
+}
+
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #2e7d32;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #1b5e20;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Lábléc */
+.footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer strong {
+    color: #c8ffda;
+}
