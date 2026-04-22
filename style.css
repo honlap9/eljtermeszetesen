@@ -100,3 +100,49 @@ ul li a:hover {
 .footer strong {
     color: #c8ffda;
 }
+/* CIKK OLDAL STÍLUSOK */
+.article-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    line-height: 1.7;
+    font-size: 18px;
+    color: #333;
+}
+
+.article-container h1 {
+    color: #2a7a3b;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.article-container h2 {
+    color: #3c8d4f;
+    margin-top: 30px;
+}
+
+.article-container h3 {
+    color: #4fae63;
+    margin-top: 20px;
+}
+
+.article-container p {
+    margin-bottom: 15px;
+}
+
+.article-container ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.article-container li {
+    margin-bottom: 8px;
+}
+
+.article-container a {
+    color: #2a7a3b;
+    font-weight: bold;
+}
