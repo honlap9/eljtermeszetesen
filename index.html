@@ -16,6 +16,8 @@
 
         <div class="search-container">
             <input type="text" placeholder="Keresés..." class="search-input">
+       <div id="search-results" class="search-results"></div>
+
         </div>
     </header>
 
@@ -99,6 +101,38 @@
         <p>Ha kérdése van, egészséges tippeket szeretne adni, hibát észlel az oldalon vagy visszajelzést küldene:</p>
         <p><strong>termeszetesen.elj0@gmail.com</strong></p>
     </footer>
+<script>
+const articles = [
+    {
+        title: "Miért fontos a fehérje a mindennapi táplálkozásban?",
+        url: "cikkek/taplalkozas-etrendkiegeszitok/miert-fontos-a-feherje.html"
+    },
+    {
+        title: "A szénhidrátok szerepe a mindennapi táplálkozásban",
+        url: "cikkek/taplalkozas-etrendkiegeszitok/szenhidratok-szerepe.html"
+    }
+];
+
+const input = document.querySelector(".search-input");
+const results = document.getElementById("search-results");
+
+input.addEventListener("input", () => {
+    const value = input.value.toLowerCase();
+    results.innerHTML = "";
+
+    if (value.length < 2) return;
+
+    const filtered = articles.filter(a => a.title.toLowerCase().includes(value));
+
+    filtered.forEach(a => {
+        const item = document.createElement("a");
+        item.href = a.url;
+        item.className = "search-result-item";
+        item.textContent = a.title;
+        results.appendChild(item);
+    });
+});
+</script>
 
 </body>
 </html>
