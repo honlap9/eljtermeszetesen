@@ -83,3 +83,36 @@
         font-size: 20px;
     }
 }
+/* KERESÉSI TALÁLATOK – ZÖLD, FŐOLDAL STÍLUS */
+.search-results {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    padding: 10px 0;
+    z-index: 1000;
+    border: 1px solid #d7e8dd;
+}
+
+.search-result-item {
+    display: block;
+    padding: 14px 20px;
+    margin: 6px 12px;
+    background: #f3f9f5; /* világos zöld háttér */
+    border-radius: 10px;
+    color: #1a5f3c; /* természetes zöld */
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+    border: 1px solid #e0efe5;
+}
+
+.search-result-item:hover {
+    background: #e6f4ec; /* halványabb zöld */
+    transform: translateX(4px);
+    border-color: #c7e2d2;
+}
