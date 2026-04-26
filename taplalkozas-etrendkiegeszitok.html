@@ -1,11 +1,28 @@
-
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Táplálkozás & Étrendkiegészítők</title>
+
+    <title>Táplálkozás & Étrendkiegészítők – Élj természetesen</title>
+
+    <!-- Faviconok -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+
+    <!-- SEO -->
+    <meta name="description" content="Táplálkozás, tápanyagok, fehérjék, szénhidrátok, zsírok – gyakorlati útmutatók és érthető magyarázatok.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Táplálkozás & Étrendkiegészítők – Élj természetesen">
+    <meta property="og:description" content="Érthető, gyakorlati útmutatók a táplálkozás alapjairól, tápanyagokról és egészséges étkezésről.">
+    <meta property="og:image" content="https://honlap9.github.io/eljtermeszetesen/logo.png">
+    <meta property="og:url" content="https://honlap9.github.io/eljtermeszetesen/taplalkozas-etrendkiegeszitok.html">
+    <meta property="og:type" content="website">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://honlap9.github.io/eljtermeszetesen/taplalkozas-etrendkiegeszitok.html">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,34 +33,80 @@
 
     <div class="search-container">
         <input type="text" placeholder="Keresés..." class="search-input">
+        <div id="search-results" class="search-results"></div>
     </div>
 </header>
 
 <div class="article-container">
 
-<h1>Táplálkozás & Étrendkiegészítők</h1>
+    <h1>Táplálkozás & Étrendkiegészítők</h1>
 
-<p>Ebben a kategóriában megtalálod az összes olyan cikket, amely segít megérteni a táplálkozás alapjait, a tápanyagok szerepét, és a mindennapi egészséges étkezés gyakorlati megvalósítását.</p>
+    <p>Ebben a kategóriában megtalálod az összes olyan cikket, amely segít megérteni a táplálkozás alapjait, a tápanyagok szerepét, és a mindennapi egészséges étkezés gyakorlati megvalósítását.</p>
 
-<div class="category-list">
+    <div class="category-list">
 
-    <a href="cikkek/taplalkozas-etrendkiegeszitok/miert-fontos-a-feherje.html" class="category-item">
-        <h3>Miért fontos a fehérje a mindennapi táplálkozásban?</h3>
-        <p>A fehérje szerepe, hatása, hiánytünetei és gyakorlati beépítése a mindennapokba.</p>
-    </a>
+        <a href="cikkek/taplalkozas-etrendkiegeszitok/miert-fontos-a-feherje.html" class="category-item">
+            <h3>Miért fontos a fehérje a mindennapi táplálkozásban?</h3>
+            <p>A fehérje szerepe, hatása, hiánytünetei és gyakorlati beépítése a mindennapokba.</p>
+        </a>
 
-    <a href="cikkek/taplalkozas-etrendkiegeszitok/szenhidratok-szerepe.html" class="category-item">
-        <h3>A szénhidrátok szerepe a mindennapi táplálkozásban</h3>
-        <p>Jó és rossz szénhidrátok, vércukor, fogyás, energia, gyakorlati útmutató.</p>
-    </a>
-<a href="cikkek/taplalkozas-etrendkiegeszitok/zsirok-szerepe.html" class="article-item">
-    <h3>A zsírok szerepe a táplálkozásban – jók vagy rosszak?</h3>
-</a>
+        <a href="cikkek/taplalkozas-etrendkiegeszitok/szenhidratok-szerepe.html" class="category-item">
+            <h3>A szénhidrátok szerepe a mindennapi táplálkozásban</h3>
+            <p>Jó és rossz szénhidrátok, vércukor, energia, fogyás és gyakorlati útmutató.</p>
+        </a>
+
+        <a href="cikkek/taplalkozas-etrendkiegeszitok/zsirok-szerepe.html" class="category-item">
+            <h3>A zsírok szerepe a táplálkozásban – jók vagy rosszak?</h3>
+            <p>Egészséges és kerülendő zsírok, hormonok, omega‑3, fogyás és gyakorlati tanácsok.</p>
+        </a>
+
+    </div>
 
 </div>
 
-</div>
+<!-- Kereső script -->
+<script>
+const articleUrls = [
+    "cikkek/taplalkozas-etrendkiegeszitok/miert-fontos-a-feherje.html",
+    "cikkek/taplalkozas-etrendkiegeszitok/szenhidratok-szerepe.html",
+    "cikkek/taplalkozas-etrendkiegeszitok/zsirok-szerepe.html"
+];
+
+async function loadArticleContent(url) {
+    const response = await fetch(url);
+    const html = await response.text();
+
+    const temp = document.createElement("div");
+    temp.innerHTML = html;
+
+    return temp.innerText.toLowerCase();
+}
+
+const input = document.querySelector(".search-input");
+const results = document.getElementById("search-results");
+
+input.addEventListener("input", async () => {
+    const value = input.value.toLowerCase();
+    results.innerHTML = "";
+
+    if (value.length < 2) return;
+
+    for (const url of articleUrls) {
+        const content = await loadArticleContent(url);
+
+        if (content.includes(value)) {
+            const item = document.createElement("a");
+            item.href = url;
+            item.className = "search-result-item";
+
+            const title = url.split("/").pop().replace(".html", "");
+            item.textContent = title;
+
+            results.appendChild(item);
+        }
+    }
+});
+</script>
 
 </body>
 </html>
-
