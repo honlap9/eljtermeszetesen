@@ -44,6 +44,7 @@ body {
 
 /* KERESÉSI TALÁLATOK */
 .search-results {
+ display: none;
     position: absolute;
     top: 48px;
     left: 0;
