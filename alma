@@ -1,0 +1,55 @@
+/* 1) A TELJES CIKKLISTA – minden oldalról működik */
+const articleUrls = [
+    "/eljtermeszetesen/cikkek/taplalkozas-etrendkiegeszitok/miert-fontos-a-feherje.html",
+    "/eljtermeszetesen/cikkek/taplalkozas-etrendkiegeszitok/szenhidratok-szerepe.html",
+    "/eljtermeszetesen/cikkek/taplalkozas-etrendkiegeszitok/zsirok-szerepe.html"
+];
+
+/* 2) CIKKTARTALOM BETÖLTÉSE */
+async function loadArticleContent(url) {
+    const response = await fetch(url);
+    const html = await response.text();
+
+    const temp = document.createElement("div");
+    temp.innerHTML = html;
+
+    return temp.innerText.toLowerCase();
+}
+
+/* 3) KERESŐ – automatikusan működik minden oldalon */
+function initSearch() {
+    const input = document.querySelector(".search-input");
+    const results = document.getElementById("search-results");
+
+    if (!input || !results) return; // ha nincs kereső, ne fusson
+
+    input.addEventListener("input", async () => {
+        const value = input.value.toLowerCase();
+        results.innerHTML = "";
+
+        if (value.length < 2) {
+            results.style.display = "none";
+            return;
+        }
+
+        for (const url of articleUrls) {
+            const content = await loadArticleContent(url);
+
+            if (content.includes(value)) {
+                const item = document.createElement("a");
+                item.href = url;
+                item.className = "search-result-item";
+
+                const title = url.split("/").pop().replace(".html", "");
+                item.textContent = title;
+
+                results.appendChild(item);
+            }
+        }
+
+        results.style.display = "block";
+    });
+}
+
+/* 4) Automatikus indítás */
+document.addEventListener("DOMContentLoaded", initSearch);
