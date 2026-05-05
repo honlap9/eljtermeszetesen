@@ -126,6 +126,24 @@
     <p>Ha kérdése van, egészséges tippeket szeretne adni, hibát észlel az oldalon vagy visszajelzést küldene:</p>
     <p><strong>termeszetesen.elj0@gmail.com</strong></p>
 </footer>
+function prettyTitle(slug) {
+    let title = slug
+        .replace(/-/g, " ")           // kötőjelek → szóköz
+        .replace(/\b\w/g, c => c.toUpperCase()); // nagy kezdőbetűk
+
+    // Magyar ékezetek visszaállítása
+    title = title
+        .replace(/miert/g, "Miért")
+        .replace(/fontos/g, "Fontos")
+        .replace(/feherje/g, "Fehérje")
+        .replace(/szenhidratok/g, "Szénhidrátok")
+        .replace(/szerepe/g, "Szerepe")
+        .replace(/zsirok/g, "Zsírok")
+        .replace(/asvanyi anyagok/g, "Ásványi anyagok")
+        .replace(/multivitamin van ertelme vagy penzkidobas/g, "Van értelme a multivitaminnak vagy pénzkidobás");
+
+    return title;
+}
 
 <!-- Kereső script -->
 <script>
