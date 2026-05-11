@@ -3,39 +3,40 @@
 <head>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3655924748102521"
      crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGDH22S18P"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-EGDH22S18P');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Élj természetesen – Egészséges életmód egyszerűen</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Faviconok -->
-    <link rel="icon" type="image/svg+xml" href="/icon.svg">
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
+<title>Élj természetesen – Egészséges életmód egyszerűen</title>
 
-    <!-- SEO meta -->
-    <meta name="description" content="Élj természetesen – táplálkozás, regeneráció, edzés, alvás és életmód egyszerűen, érthetően.">
+<!-- Faviconok -->
+<link rel="icon" type="image/svg+xml" href="/icon.svg">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Élj természetesen – Egészséges életmód egyszerűen">
-    <meta property="og:description" content="Táplálkozás, regeneráció, edzés, alvás és természetes életmód – érthetően, gyakorlatiasan.">
-    <meta property="og:image" content="https://honlap9.github.io/eljtermeszetesen/logo.png">
-    <meta property="og:url" content="https://honlap9.github.io/eljtermeszetesen/">
-    <meta property="og:type" content="website">
+<!-- SEO meta -->
+<meta name="description" content="Élj természetesen – táplálkozás, regeneráció, edzés, alvás és életmód egyszerűen, érthetően.">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://honlap9.github.io/eljtermeszetesen/">
+<!-- Open Graph -->
+<meta property="og:title" content="Élj természetesen – Egészséges életmód egyszerűen">
+<meta property="og:description" content="Táplálkozás, regeneráció, edzés, alvás és természetes életmód – érthetően, gyakorlatiasan.">
+<meta property="og:image" content="https://honlap9.github.io/eljtermeszetesen/logo.png">
+<meta property="og:url" content="https://honlap9.github.io/eljtermeszetesen/">
+<meta property="og:type" content="website">
 
-    <!-- Stílus -->
-    <link rel="stylesheet" href="style.css">
+<!-- Canonical -->
+<link rel="canonical" href="https://honlap9.github.io/eljtermeszetesen/">
+
+<!-- Stílus -->
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -49,6 +50,7 @@
         <div id="search-results" class="search-results"></div>
     </div>
 </header>
+
 <!-- Legfelkeresettebb cikkek -->
 <section class="popular">
     <h2>Legfelkeresettebb cikkek</h2>
@@ -121,33 +123,35 @@
     </details>
 
 </section>
+
 <!-- Lábléc -->
 <footer class="footer">
     <p>Ha kérdése van, egészséges tippeket szeretne adni, hibát észlel az oldalon vagy visszajelzést küldene:</p>
     <p><strong>termeszetesen.elj0@gmail.com</strong></p>
 </footer>
+
+<!-- KERESŐ SCRIPT -->
+<script>
+// 0) SZÉP CÍM GENERÁLÓ FUNKCIÓ
 function prettyTitle(slug) {
     let title = slug
-        .replace(/-/g, " ")           // kötőjelek → szóköz
-        .replace(/\b\w/g, c => c.toUpperCase()); // nagy kezdőbetűk
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, c => c.toUpperCase());
 
-    // Magyar ékezetek visszaállítása
     title = title
-        .replace(/miert/g, "Miért")
-        .replace(/fontos/g, "Fontos")
-        .replace(/feherje/g, "Fehérje")
-        .replace(/szenhidratok/g, "Szénhidrátok")
-        .replace(/szerepe/g, "Szerepe")
-        .replace(/zsirok/g, "Zsírok")
-        .replace(/asvanyi anyagok/g, "Ásványi anyagok")
-        .replace(/multivitamin van ertelme vagy penzkidobas/g, "Van értelme a multivitaminnak vagy pénzkidobás");
+        .replace(/Miert/g, "Miért")
+        .replace(/Fontos/g, "Fontos")
+        .replace(/Feherje/g, "Fehérje")
+        .replace(/Szenhidratok/g, "Szénhidrátok")
+        .replace(/Szerepe/g, "Szerepe")
+        .replace(/Zsirok/g, "Zsírok")
+        .replace(/Asvanyi Anyagok/g, "Ásványi anyagok")
+        .replace(/Multivitamin Van Ertelme Vagy Penzkidobas/g, "Van értelme a multivitaminnak vagy pénzkidobás");
 
     return title;
 }
 
-<!-- Kereső script -->
-<script>
-/* 1) AUTOMATIKUS CIKKLISTA */
+// 1) AUTOMATIKUS CIKKLISTA
 const articleUrls = [
     "miert-fontos-a-feherje.html",
     "szenhidratok-szerepe.html",
@@ -156,8 +160,7 @@ const articleUrls = [
     "multivitamin-van-ertelme-vagy-penzkidobas.html"
 ];
 
-
-/* 2) AUTOMATIKUS TARTALOM BETÖLTŐ FUNKCIÓ */
+// 2) AUTOMATIKUS TARTALOM BETÖLTŐ FUNKCIÓ
 async function loadArticleContent(url) {
     const response = await fetch(url);
     const html = await response.text();
@@ -168,14 +171,15 @@ async function loadArticleContent(url) {
     return temp.innerText.toLowerCase();
 }
 
-/* 3) KERESŐ – TELJES CIKKTARTALOMBAN KERES */
+// 3) KERESŐ – TELJES CIKKTARTALOMBAN KERES
 const input = document.querySelector(".search-input");
 const results = document.getElementById("search-results");
 
 input.addEventListener("input", async () => {
     const value = input.value.toLowerCase();
     results.innerHTML = "";
-results.style.display = "none";
+    results.style.display = "none";
+
     if (value.length < 2) return;
 
     for (const url of articleUrls) {
@@ -186,13 +190,14 @@ results.style.display = "none";
             item.href = url;
             item.className = "search-result-item";
 
-            // Automatikus cím kinyerése
-            const title = url.split("/").pop().replace(".html", "");
-            item.textContent = title;
+            const slug = url.split("/").pop().replace(".html", "");
+            item.textContent = prettyTitle(slug);
 
             results.appendChild(item);
-        }results.style.display = "block";
+        }
     }
+
+    results.style.display = "block";
 });
 </script>
 
