@@ -41,7 +41,7 @@
 
 <h1>A szénhidrátok szerepe a mindennapi táplálkozásban – teljes, gyakorlati útmutató</h1>
 
-<p>A szénhidrátok az egyik legvitatottabb tápanyagok közé tartoznak. Van, aki szerint hízlalnak, van, aki szerint nélkülözhetetlenek, és van, aki teljesen száműzi őket az étrendjéből. A valóság azonban sokkal árnyaltabb: a szénhidrátok nem ellenségek, hanem a tested egyik legfontosabb energiaforrásai — csak tudni kell, melyiket, mikor és mennyit fogyasztani.</p>
+<p>A szénhidrátok az egyik legvitatottabb tápanyagok közé tartoznak...</p>
 
 <p>Ebben a cikkben megtudod:</p>
 <ul>
@@ -57,7 +57,7 @@
 </ul>
 
 <h2>1. Mi is valójában a szénhidrát?</h2>
-<p>A szénhidrát a tested egyik alapvető energiaforrása. A szervezeted glükózzá alakítja, amelyet az agy, az izmok, a sejtek és az idegrendszer használnak fel.</p>
+<p>A szénhidrát a tested egyik alapvető energiaforrása...</p>
 
 <p>A szénhidrátok három fő csoportba tartoznak:</p>
 <ul>
@@ -69,15 +69,13 @@
 <h2>2. A szénhidrátok típusai – nem mindegyik egyforma</h2>
 
 <h3>1) Egyszerű szénhidrátok (cukrok)</h3>
-<p>Gyorsan emelik a vércukrot, gyors energiát adnak, de hamar éhes leszel tőlük.</p>
-<p>Ide tartozik: kristálycukor, méz, gyümölcscukor, üdítők, édességek, fehér lisztes péksütemények.</p>
+<p>Gyorsan emelik a vércukrot...</p>
 
 <h3>2) Összetett szénhidrátok (keményítők)</h3>
-<p>Lassan emelik a vércukrot, tartós energiát adnak.</p>
-<p>Ide tartozik: zab, barna rizs, bulgur, quinoa, teljes kiőrlésű tészta, édesburgonya, burgonya, hüvelyesek.</p>
+<p>Lassan emelik a vércukrot...</p>
 
 <h3>3) Rostok</h3>
-<p>Nem emelik a vércukrot, nem adnak kalóriát, de javítják az emésztést, csökkentik az éhséget és stabilizálják a vércukrot.</p>
+<p>Nem emelik a vércukrot...</p>
 
 <h2>3. Miért fontosak a szénhidrátok? A 10 legfontosabb ok</h2>
 
@@ -88,16 +86,16 @@
 <p>Edzés közben az izmok glikogént égetnek.</p>
 
 <h3>3. Stabil vércukorszint</h3>
-<p>A jó szénhidrátok segítenek elkerülni az éhségrohamokat és a vércukor-ingadozást.</p>
+<p>A jó szénhidrátok segítenek elkerülni az éhségrohamokat...</p>
 
 <h3>4. Hormonális egyensúly</h3>
-<p>A szénhidrátok hatással vannak a pajzsmirigyre, stresszhormonokra, inzulinra és leptinre.</p>
+<p>A szénhidrátok hatással vannak a pajzsmirigyre...</p>
 
 <h3>5. Jobb alvás</h3>
 <p>A megfelelő szénhidrátbevitel segíti a melatonin termelést.</p>
 
 <h3>6. Fogyás támogatása</h3>
-<p>Igen, a szénhidrátok segíthetnek fogyni, ha jó forrásból jönnek.</p>
+<p>Igen, a szénhidrátok segíthetnek fogyni...</p>
 
 <h3>7. Emésztés támogatása</h3>
 <p>A rostok nélkül nincs egészséges bélflóra.</p>
@@ -171,53 +169,16 @@
 </ul>
 
 <h2>9. Összegzés</h2>
-<p>A szénhidrátok nem ellenségek — a tested egyik legfontosabb energiaforrásai. A kulcs nem az, hogy „keveset” egyél, hanem hogy jó minőségűt, megfelelő mennyiségben és jó időzítéssel.</p>
+<p>A szénhidrátok nem ellenségek — a tested egyik legfontosabb energiaforrásai...</p>
 
 </div>
 
-<!-- Kereső script -->
-<script>
-const articleUrls = [
-    "miert-fontos-a-feherje.html",
-    "szenhidratok-szerepe.html",
-    "zsirok-szerepe.html"
-];
+<footer class="footer">
+    <p>Ha kérdése van vagy hibát észlel:</p>
+    <p><strong>termeszetesen.elj0@gmail.com</strong></p>
+</footer>
 
-async function loadArticleContent(url) {
-    const response = await fetch(url);
-    const html = await response.text();
-
-    const temp = document.createElement("div");
-    temp.innerHTML = html;
-
-    return temp.innerText.toLowerCase();
-}
-
-const input = document.querySelector(".search-input");
-const results = document.getElementById("search-results");
-
-input.addEventListener("input", async () => {
-    const value = input.value.toLowerCase();
-    results.innerHTML = "";
-
-    if (value.length < 2) return;
-
-    for (const url of articleUrls) {
-        const content = await loadArticleContent(url);
-
-        if (content.includes(value)) {
-            const item = document.createElement("a");
-            item.href = url;
-            item.className = "search-result-item";
-
-            const title = url.split("/").pop().replace(".html", "");
-            item.textContent = title;
-
-            results.appendChild(item);
-        }
-    }
-});
-</script>
+<script src="../../kereso.js"></script>
 
 </body>
 </html>
