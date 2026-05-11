@@ -41,32 +41,32 @@
 
 <h1>A zsírok szerepe a táplálkozásban – jók vagy rosszak?</h1>
 
-<p>A zsírok évtizedeken keresztül a táplálkozástudomány „fekete bárányai” voltak. A 80‑as és 90‑es években a közvélemény és a dietetikai ajánlások is azt sugallták, hogy a zsír fogyasztása egyenlő a hízással, a szívbetegségekkel és az egészségtelen életmóddal.</p>
+<p>A zsírok évtizedeken keresztül a táplálkozástudomány „fekete bárányai” voltak...</p>
 
-<p>Ma már tudjuk, hogy ez óriási tévedés volt. A modern kutatások egyértelműen bizonyítják: a zsír nem ellenség, sőt, elengedhetetlen az egészséges működéshez. A probléma nem a zsírral mint tápanyaggal van, hanem azzal, hogy milyen típusú zsírokat fogyasztunk, milyen arányban és milyen forrásból.</p>
+<p>Ma már tudjuk, hogy ez óriási tévedés volt...</p>
 
 <h2>Miért van szüksége a szervezetnek zsírra?</h2>
 
 <h3>1. Energiaforrás</h3>
-<p>A zsír a legkoncentráltabb energiaforrás: 1 g zsír 9 kcal-t tartalmaz.</p>
+<p>A zsír a legkoncentráltabb energiaforrás...</p>
 
 <h3>2. Hormontermelés</h3>
-<p>A hormonok jelentős része zsírból épül fel, például a tesztoszteron, ösztrogén, progeszteron, kortizol és a D-vitamin.</p>
+<p>A hormonok jelentős része zsírból épül fel...</p>
 
 <h3>3. Sejtfalak felépítése</h3>
-<p>Minden sejted membránja zsírokból áll — a jó minőségű zsírok rugalmas, egészséges sejtfalakat eredményeznek.</p>
+<p>Minden sejted membránja zsírokból áll...</p>
 
 <h3>4. Agy és idegrendszer működése</h3>
-<p>Az agy 60%-a zsír, főként omega‑3 zsírsavakból.</p>
+<p>Az agy 60%-a zsír...</p>
 
 <h3>5. Vitaminok felszívódása</h3>
-<p>A zsírban oldódó vitaminok (A, D, E, K) csak akkor tudnak felszívódni, ha van elegendő zsír a szervezetben.</p>
+<p>A zsírban oldódó vitaminok csak zsírral tudnak felszívódni.</p>
 
 <h2>A zsírok típusai</h2>
-<p>A zsírokat három nagy csoportra osztjuk: telített zsírok, egyszeresen telítetlen zsírok, többszörösen telítetlen zsírok (omega‑3, omega‑6). És van egy negyedik, mesterséges kategória: a transzzsírok.</p>
+<p>Telített, egyszeresen telítetlen, többszörösen telítetlen és transzzsírok.</p>
 
 <h2>Telített zsírok – tényleg károsak?</h2>
-<p>A modern kutatások szerint a telített zsírok természetes forrásból fogyasztva nem károsak.</p>
+<p>Természetes forrásból fogyasztva nem károsak.</p>
 
 <h3>Források:</h3>
 <ul>
@@ -79,7 +79,7 @@
 </ul>
 
 <h2>Egyszeresen telítetlen zsírok – a szív barátai</h2>
-<p>Ezek a zsírok a mediterrán étrend alapjai, gyulladáscsökkentők és javítják a koleszterinszintet.</p>
+<p>A mediterrán étrend alapjai.</p>
 
 <h3>Források:</h3>
 <ul>
@@ -99,16 +99,16 @@
 </ul>
 
 <h3>Omega‑6 problémái:</h3>
-<p>A modern étrendben túl sok omega‑6 van, ami gyulladást okozhat és felborítja az omega‑3 arányt.</p>
+<p>A modern étrendben túl sok van belőle.</p>
 
 <h2>Transzzsírok – a valódi ellenség</h2>
-<p>A transzzsírok mesterségesen hidrogénezett zsírok, amelyek bizonyítottan károsak.</p>
+<p>Mesterségesen hidrogénezett zsírok, bizonyítottan károsak.</p>
 
 <h2>Mennyi zsírt érdemes fogyasztani?</h2>
-<p>A napi kalóriabevitel 25–35%-a jöhet zsírból. Egy átlagos 2000 kcal-os étrendnél ez 55–75 g zsírt jelent.</p>
+<p>A napi kalóriabevitel 25–35%-a jöhet zsírból.</p>
 
 <h2>A zsírok és a fogyás kapcsolata</h2>
-<p>A jó zsírok fogyasztása segíti a fogyást, mert stabilizálja a vércukorszintet, csökkenti az éhséget és támogatja a hormonrendszert.</p>
+<p>A jó zsírok stabilizálják a vércukrot és csökkentik az éhséget.</p>
 
 <h2>A legjobb zsírforrások</h2>
 <ul>
@@ -122,53 +122,16 @@
 </ul>
 
 <h2>Összegzés</h2>
-<p>A zsírok nem ellenségek, hanem az egészséges életmód alapjai. A kulcs: jó zsírokat fogyassz, kerüld a transzzsírokat, és tartsd egyensúlyban az omega‑3 és omega‑6 arányt.</p>
+<p>A zsírok nem ellenségek — a kulcs a minőség és az arány.</p>
 
 </div>
 
-<!-- Kereső script -->
-<script>
-const articleUrls = [
-    "miert-fontos-a-feherje.html",
-    "szenhidratok-szerepe.html",
-    "zsirok-szerepe.html"
-];
+<footer class="footer">
+    <p>Ha kérdése van vagy hibát észlel:</p>
+    <p><strong>termeszetesen.elj0@gmail.com</strong></p>
+</footer>
 
-async function loadArticleContent(url) {
-    const response = await fetch(url);
-    const html = await response.text();
-
-    const temp = document.createElement("div");
-    temp.innerHTML = html;
-
-    return temp.innerText.toLowerCase();
-}
-
-const input = document.querySelector(".search-input");
-const results = document.getElementById("search-results");
-
-input.addEventListener("input", async () => {
-    const value = input.value.toLowerCase();
-    results.innerHTML = "";
-
-    if (value.length < 2) return;
-
-    for (const url of articleUrls) {
-        const content = await loadArticleContent(url);
-
-        if (content.includes(value)) {
-            const item = document.createElement("a");
-            item.href = url;
-            item.className = "search-result-item";
-
-            const title = url.split("/").pop().replace(".html", "");
-            item.textContent = title;
-
-            results.appendChild(item);
-        }
-    }
-});
-</script>
+<script src="../../kereso.js"></script>
 
 </body>
 </html>
