@@ -1,37 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Főoldal -->
   <url>
-    <loc>https://honlap9.github.io/eljtermeszetesen/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <loc>https://eljtermeszetesen.hu/</loc>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Kategóriaoldal -->
   <url>
-    <loc>https://honlap9.github.io/eljtermeszetesen/taplalkozas-etrendkiegeszitok.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Cikkek -->
-  <url>
-    <loc>https://honlap9.github.io/eljtermeszetesen/cikkek/taplalkozas-etrendkiegeszitok/miert-fontos-a-feherje.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://honlap9.github.io/eljtermeszetesen/cikkek/taplalkozas-etrendkiegeszitok/szenhidratok-szerepe.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://honlap9.github.io/eljtermeszetesen/cikkek/taplalkozas-etrendkiegeszitok/zsirok-szerepe.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
+    <loc>https://eljtermeszetesen.hu/miert-fontos-a-feherje.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
