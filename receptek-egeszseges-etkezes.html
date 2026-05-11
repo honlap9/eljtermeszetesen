@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receptek és egészséges étkezés – Élj Természetesen</title>
+
+    <meta name="description" content="Egészséges receptek, étkezési tippek és táplálkozási útmutatók.">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <a href="index.html"><img src="logo.png" alt="Élj Természetesen logó"></a>
+<header class="header">
+    <a href="index.html" class="logo">Éljtermészetesen</a>
+
+    <div class="search-container">
+        <input type="text" placeholder="Keresés..." class="search-input">
+        <div id="search-results" class="search-results"></div>
+    </div>
 </header>
 
-<main class="container">
+<div class="article-container">
+
     <h1>Receptek és egészséges étkezés</h1>
     <p class="kategoria-leiras">Egészséges receptek, étkezési tippek és táplálkozási útmutatók.</p>
 
-    <div class="cikk-lista">
+    <div class="category-list">
         <p>Még nincsenek cikkek ebben a kategóriában.</p>
     </div>
-</main>
 
-<footer>
+</div>
+
+<footer class="footer">
     <p>© 2026 Élj Természetesen</p>
 </footer>
+
+<script src="kereso.js"></script>
 
 </body>
 </html>
