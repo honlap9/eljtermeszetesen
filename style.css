@@ -291,3 +291,35 @@ details a:hover {
         font-size: 17px;
     }
 }
+.article {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.article h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.article h2 {
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+.article p {
+    margin: 15px 0;
+}
+
+.article ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.article li {
+    margin: 8px 0;
+}
