@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élj Természetesen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Kattintható nagy Élj Természetesen felirat a tetején -->
+    <header>
+        <a href="index.html" class="logo-link">Élj Természetesen</a>
+    </header>
+
+    <!-- Kereső sáv -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Keress a cikkek között...">
+        <button onclick="searchFunction()">Keresés</button>
+    </div>
+
+    <div class="main-container">
+        
+        <!-- Gyorsmenü a kategóriákhoz -->
+        <nav class="category-nav">
+            <a href="#kategoria-1">Gyógynövények</a>
+            <a href="#kategoria-2">Kiskert</a>
+            <a href="#kategoria-3">Táplálkozás</a>
+            <a href="#kategoria-4">Zero Waste</a>
+            <a href="#kategoria-5">Bőrápolás</a>
+            <a href="#kategoria-6">Öko-otthon</a>
+            <a href="#kategoria-7">Zöld Divat</a>
+            <a href="#kategoria-8">Relaxáció</a>
+        </nav>
+
+        <!-- ITT KEZDŐDNEK A KATEGÓRIÁK ÉS A CIKKEK -->
+        
+        <!-- 1. KATEGÓRIA -->
+        <section id="kategoria-1" class="category-section">
+            <h2>1. Gyógynövények és természetes patika</h2>
+            <div id="cikkek-helye-1">
+                <!-- Ide jönnek majd az 1. kategória 2000 szavas cikkei -->
+                <p><em>A cikkek generálása folyamatban van, a következő üzenetben érkezik az első kiterjedt szakmai anyag!</em></p>
+            </div>
+        </section>
+
+        <!-- A többi 7 kategória üresen várja a szöveget a következő lépésekben -->
+        <section id="kategoria-2" class="category-section"><h2>2. Vegyszermentes kiskert és permakultúra</h2><div id="cikkek-helye-2"></div></section>
+        <section id="kategoria-3" class="category-section"><h2>3. Tudatos és tiszta táplálkozás</h2><div id="cikkek-helye-3"></div></section>
+        <section id="kategoria-4" class="category-section"><h2>4. Hulladékmentes (Zero Waste) mindennapok</h2><div id="cikkek-helye-4"></div></section>
+        <section id="kategoria-5" class="category-section"><h2>5. Természetes bőrápolás és kozmetikumok</h2><div id="cikkek-helye-5"></div></section>
+        <section id="kategoria-6" class="category-section"><h2>6. Öko-otthon és zöld háztartás</h2><div id="cikkek-helye-6"></div></section>
+        <section id="kategoria-7" class="category-section"><h2>7. Fenntartható divat és textíliák</h2><div id="cikkek-helye-7"></div></section>
+        <section id="kategoria-8" class="category-section"><h2>8. Mentális egyensúly és erdei relaxáció</h2><div id="cikkek-helye-8"></div></section>
+
+    </div>
+
+    <!-- Lábléc a kért szöveggel és elérhetőséggel, név nélkül -->
+    <footer>
+        <p>Ha hibát tapasztal az oldalon, esetleg új témát ajánlana, írjon nekem bizalommal!</p>
+        <p>Email: <a href="mailto:info@eljtermeszetesen.hu">info@eljtermeszetesen.hu</a></p>
+        <p style="margin-top: 20px; font-size: 0.85rem; color: #a5d6a7;">&copy; 2026 eljtermeszetesen.hu - Minden jog fenntartva.</p>
+    </footer>
+
+    <!-- Egyszerű beépített keresőmotor JavaScript kódja -->
+    <script>
+    function searchFunction() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let articles = document.getElementsByClassName('article');
+        
+        for (let i = 0; i < articles.length; i++) {
+            let text = articles[i].innerText.toLowerCase();
+            if (text.includes(input)) {
+                articles[i].style.display = "block";
+            } else {
+                articles[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
