@@ -263,3 +263,59 @@ body {
     .article-page { padding: 30px 20px; }
     .article-page h1 { font-size: 2rem; }
 }
+/* --- INGYENES E-BOOK FELIRATKOZÁSI SZEKCIÓ --- */
+.ebook-section {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.ebook-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 2px solid #2F855A; /* Markáns zöld szegély */
+    box-shadow: 0 10px 25px rgba(47, 133, 90, 0.05);
+    text-align: center;
+}
+
+.ebook-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #143419;
+    margin-bottom: 10px;
+}
+
+.ebook-container p {
+    font-size: 1.05rem;
+    color: #4A5568;
+    margin-bottom: 25px;
+}
+
+/* --- MAILERLITE ŰRLAP CSS ZÖLDÍTÉS (NINCS ALÁHÚZÁS) --- */
+.ebook-section .ml-embedded .ml-form-embedSubmit button.primary {
+    background-color: #2F855A !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    text-decoration: none !important; /* Biztosítja, hogy ne legyen aláhúzva */
+    border: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.ebook-section .ml-embedded .ml-form-embedSubmit button.primary:hover {
+    background-color: #1c3d25 !important; /* Hover állapotban az erdei sötétzöld */
+    text-decoration: none !important;
+}
+
+/* Az input mezők finomítása az űrlapon belül */
+.ebook-section .ml-embedded .form-control {
+    border: 1px solid #cce0d2 !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+}
+
+.ebook-section .ml-embedded .form-control:focus {
+    border-color: #2F855A !important;
+}
