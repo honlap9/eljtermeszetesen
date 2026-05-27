@@ -2,14 +2,14 @@
 <html lang="hu">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGDH22S18P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGDH22S18P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-EGDH22S18P');
-</script>
+      gtag('config', 'G-EGDH22S18P');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Élj Természetesen | Útmutató a fenntartható és tiszta élethez</title>
@@ -24,16 +24,16 @@
     
     <link rel="stylesheet" href="style.css">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3655924748102521"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3655924748102521" crossorigin="anonymous"></script>
+    
     <!-- MailerLite Univerzális Mérőkód -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2384750');
-</script>
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2384750');
+    </script>
 </head>
 <body>
 
@@ -51,17 +51,18 @@
             <input type="text" id="search-input" onkeyup="kereses()" placeholder="Keress a témák vagy cikkek között...">
         </div>
     </section>
-<div style="text-align: center; margin: 25px 0;">
-  <!-- Ingyenes E-book feliratkozási rész a főoldalon -->
-<section class="ebook-section">
-    <h2>Töltsd le az ingyenes E-bookot!</h2>
-    <p>Tanuld meg, hogyan élhetsz teljesebb, természetesebb életet lépésről lépésre.</p>
-    
-    <!-- MailerLite Beágyazott Űrlap -->
-    <div class="ml-embedded" data-form="JAHlK9"></div>
-</section>
-    </a>
-</div>
+
+    <!-- Ingyenes E-book feliratkozási rész a főoldalon -->
+    <section class="ebook-section">
+        <div class="ebook-container">
+            <h2>Töltsd le az ingyenes E-bookot!</h2>
+            <p>Tanuld meg, hogyan élhetsz teljesebb, természetesebb életet lépésről lépésre.</p>
+            
+            <!-- MailerLite Beágyazott Űrlap -->
+            <div class="ml-embedded" data-form="JAHlK9"></div>
+        </div>
+    </section>
+
     <main class="container">
         
         <div class="category-accordion">
@@ -73,7 +74,7 @@
                 <ul class="article-list">
                     <li><a href="cikk-1-1.html">1.1 A Kárpát-medence elfeledett gyógynövényei: Teljes útmutató a vadon termő patikához</a></li>
                     <li><a href="cikk-1-2.html">1.2 Házi gyógynövény-alkímia: Olajok, kenőcsök és szirupok készítése lépésről lépésre</a></li>
-                    <li><a href="cikk-1-3.html">1.3 Légzőrendszerünk védelme: Gyógynövényes terápiák az őszi és téli megfázásos szezonban</a></li>
+                    <li><a href="cikk-1-3.html">1.3 Légzőrendszerünk védelme: Gyógynövényes二次 terápiák az őszi és téli megfázásos szezonban</a></li>
                 </ul>
             </div>
         </div>
@@ -87,7 +88,7 @@
                 <ul class="article-list">
                     <li><a href="cikk-2-1.html">2.1 Az élő talaj titka: A regeneratív kertészet alapjai és a komposztálás művészete</a></li>
                     <li><a href="cikk-2-2.html">2.2 Növényi szövetségek: Társültetési stratégiák a természetes kártevőirtásért</a></li>
-                    <li><a href="cikk-2-3.html">2.3 Vízgazdálgodás az aszály korában: Esővíz-gyűjtés és a mulcsozás tudománya</a></li>
+                    <li><a href="cikk-2-3.html">2.3 Vízgazdálkodás az aszály korában: Esővíz-gyűjtés és a mulcsozás tudománya</a></li>
                 </ul>
             </div>
         </div>
@@ -187,7 +188,6 @@
     </footer>
 
     <script>
-    // Lenyitás és bezárás funkció
     function toggleAccordion(id) {
         var content = document.getElementById(id);
         var header = content.previousElementSibling;
@@ -204,13 +204,11 @@
         }
     }
 
-    // Élő kereső funkció
     function kereses() {
         var input = document.getElementById('search-input').value.toLowerCase();
         var items = document.querySelectorAll('.article-list li');
         var accordions = document.querySelectorAll('.accordion-content');
         
-        // Ha üres a kereső, zárjunk be mindent az alapállapotra
         if (input === "") {
             accordions.forEach(function(acc) {
                 acc.style.display = "none";
@@ -226,7 +224,6 @@
             var text = item.textContent.toLowerCase();
             if (text.includes(input)) {
                 item.style.display = "block";
-                // Kinyitjuk azt a kategóriát, amiben találat van
                 var parentContent = item.closest('.accordion-content');
                 parentContent.style.display = "block";
                 parentContent.previousElementSibling.querySelector('.icon').textContent = "-";
